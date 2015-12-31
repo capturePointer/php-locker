@@ -1,4 +1,5 @@
 <?php
+namespace capturePointer;
 include_once dirname(__FILE__) . '/LockerClass.inc';
 function locker_acquire($name, $timeout = 30.0){
     $lock = \capturePointer\Locker::getInstance();

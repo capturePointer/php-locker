@@ -1,10 +1,10 @@
 <?php
 require_once dirname(__FILE__) . "/Locker.inc";
-if(!locker_acquire("lockName",10.0)){
-	if(!locker_wait("lockName",3)){
+if(!\capturePointer\locker_acquire("lockName",10.0)){
+	if(!\capturePointer\locker_wait("lockName",3)){
 		return false;
 	}
-	else if(!locker_acquire("lockName",10.0)){
+	else if(!\capturePointer\locker_acquire("lockName",10.0)){
 		return false;
 	}
 }
@@ -12,4 +12,4 @@ if(!locker_acquire("lockName",10.0)){
 //add your code
 
 
-locker_release("lockName");
+\capturePointer\locker_release("lockName");
